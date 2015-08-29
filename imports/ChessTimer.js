@@ -2,9 +2,8 @@
 import Timer from "./Timer";
 
 /**
- * ChessTimer Module
- * @param {number} seed - Initial timer values
- * @param {number} interval - Interval at which to decrement timers
+ * Constant representing Chess Timer State
+ * @type {{0: string, 1: string, 2: string}}
  */
 const STATE = {
     0: 'OFF',
@@ -12,7 +11,17 @@ const STATE = {
     2: 'WHITE'
 };
 
+/**
+ * ChessTimer Class
+ * @param {number} seed - Initial timer values
+ * @param {number} interval - Interval at which to decrement timers
+ */
 class ChessTimer {
+    /**
+     * ChessTimer Constructor
+     * @param seed
+     * @param interval
+     */
     constructor(seed, interval) {
         this._seed = seed;
         this._interval = interval;
@@ -98,8 +107,8 @@ class ChessTimer {
     }
 
     /**
-     * Function to return the time of the currently running black timer
-     * @returns {number} Time in ms
+     * Accessor to return the time of the currently running black timer
+     * @returns {ChessTimer._whiteTimer._currentTime}  Time in ms
      */
     get getBlackTime()
     {
@@ -107,18 +116,26 @@ class ChessTimer {
     }
 
     /**
-     * Function to return the time of the currently running white timer
-     * @returns {number} Time in ms
+     * Accessor to return the time of the currently running white timer
+     * @returns {ChessTimer._whiteTimer._currentTime} Time in ms
      */
     get getWhiteTime()
     {
         return this._whiteTimer.getCurrentTime;
     }
 
+    /**
+     * Accessor to return current timer state
+     * @returns {ChessTimer._currentState|*}
+     */
     get timerState()
     {
         return this._currentState;
     }
 }
 
+/**
+ * Export ChessTimer Class
+ * @type {ChessTimer}
+ */
 module.exports = ChessTimer;

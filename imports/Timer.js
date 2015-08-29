@@ -5,6 +5,11 @@
  * @param {number} interval - Interval at which the timer is decremented
  */
 class Timer {
+    /**
+     * Timer Constructor
+     * @param seed
+     * @param interval
+     */
     constructor(seed, interval)
     {
         this._seed = seed;
@@ -14,7 +19,7 @@ class Timer {
     }
 
     /**
-     * Start the timer, begin counting down
+     * Function to start the timer, begin counting down
      */
     startTimer()
     {
@@ -28,14 +33,14 @@ class Timer {
     }
 
     /**
-     * Pause the timer, halt counting down
+     * Function to pause the timer, halt counting down
      */
     pauseTimer() {
         clearInterval(this._intervalID);
     }
 
     /**
-     * Reset timer to initial seed value
+     * Function to reset timer to initial seed value
      */
     resetTimer() {
         clearInterval(this._intervalID);
@@ -51,4 +56,8 @@ class Timer {
     }
 }
 
+/**
+ * Export Timer Class
+ * @type {Timer}
+ */
 module.exports = Timer;
