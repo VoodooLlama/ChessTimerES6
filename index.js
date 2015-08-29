@@ -47,17 +47,18 @@ class TimerDisplay extends React.Component{
         var blackTime = this.format(this.state.timer.getBlackTime),
             whiteTime = this.format(this.state.timer.getWhiteTime);
 
-        return  <div>
-                    <div>{blackTime}</div>
-                    <span>
-                        <button onClick={this.startBlack}>Start Black</button></span>
-                    <div>{whiteTime}</div>
-                    <span>
+        return  <div id="chess-timer">
+                    <section id="black-timer-container">
+                        <label>{blackTime}</label>
+                        <button onClick={this.startBlack}>Start Black</button>
+                    </section>
+                    <section id="white-timer-container">
+                        <label>{whiteTime}</label>
                         <button onClick={this.startWhite}>Start White</button>
-                    </span>
-                    <div>
-                        <button onClick={this.reset}>RESET</button>
-                    </div>
+                    </section>
+                    <section id="reset-container">
+                        <button onClick={this.reset}>Reset</button>
+                    </section>
                 </div>;
     }
 }

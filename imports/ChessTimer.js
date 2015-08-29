@@ -93,7 +93,7 @@ class ChessTimer {
     {
         this._blackTimer.resetTimer();
         this._whiteTimer.resetTimer();
-        clearInterval(this.winIntervalID);
+        clearInterval(this._winIntervalID);
         this._currentState = STATE[0];
     }
 

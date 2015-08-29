@@ -1,0 +1,17 @@
+#chess-timer {
+    display: inline-block;
+    border: 1px solid #000;
+    text-align: center;
+}
+section[id$="timer-container"] {
+    color: #000;
+    padding: 1em 1em .5em 1em;
+    font-size: 2em;
+    display: inline-block;
+}
+label {
+    display: block;
+}
+#reset-container {
+    padding-bottom: 1em;
+}
